@@ -91,7 +91,7 @@ def get_submission(reddit):
 
 
 def get_submission_comments(submission):
-    submission.comments.replace_more(limit=None)  # all top-level comments
+    submission.comments.replace_more(limit=None)
     comments = np.array(
         [comment.body.lower().strip() for comment in submission.comments.list()])
     return comments
